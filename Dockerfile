@@ -1,2 +1,3 @@
 FROM apache/airflow:2.7.3
-RUN pip install --no-cache-dir airflow-clickhouse-plugin
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
